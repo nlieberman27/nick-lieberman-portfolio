@@ -61,7 +61,7 @@ export const portfolio = {
       "Early distribution experiments",
     ],
     process:
-      "Nick designed, built, refined, and deployed Loven through an AI-assisted workflow involving Replit, GitHub, and Codex. The work extended beyond prompting: sustained product judgment, experience design, testing, troubleshooting, implementation, and iteration shaped the released product.",
+      "I designed, built, refined, and deployed Loven through an AI-assisted workflow involving Replit, GitHub, and Codex. The work extended beyond prompting: sustained product judgment, experience design, testing, troubleshooting, implementation, and iteration shaped the released product.",
     tradeoffs: [
       {
         title: "Three roles, one system",
@@ -102,7 +102,7 @@ export const portfolio = {
       label: "02 · Entrepreneurship and operations",
       title: "Marin Emergency Kits",
       summary:
-        "Nick turned a local preparedness need into an operating business, handling the work from sourcing and pricing through marketing and fulfillment.",
+        "I turned a local preparedness need into an operating business, handling the work from sourcing and pricing through marketing and fulfillment.",
       context:
         "Founded in 2023 after identifying a local emergency-preparedness need.",
       result: "≈ $10,000",
@@ -119,7 +119,7 @@ export const portfolio = {
       label: "03 · Operations and commercial decision-making",
       title: "Paradise Del Mar",
       summary:
-        "Nick helped turn a neglected guesthouse into a launch-ready short-term rental, combining renovation decisions, pricing, listing operations, and guest experience.",
+        "I helped turn a neglected guesthouse into a launch-ready short-term rental, combining renovation decisions, pricing, listing operations, and guest experience.",
       context:
         "Operations and property management near La Paz, Mexico · Summer 2024",
       result: "≈ $30,000",
@@ -137,7 +137,7 @@ export const portfolio = {
       label: "04 · Early-stage research and market testing",
       title: "Lake Street Labs",
       summary:
-        "Before committing to a regulated product, Nick investigated whether the opportunity was commercially, technically, and regulatorily viable.",
+        "Before committing to a regulated product, I investigated whether the opportunity was commercially, technically, and regulatorily viable.",
       context:
         "An exploratory effort focused on over-the-counter solutions for canker sores; no finished medical product launched.",
       result: "40+ practices",
@@ -155,7 +155,7 @@ export const portfolio = {
       label: "05 · Professional project execution",
       title: "GCI General Contractors",
       summary:
-        "At GCI, Nick applied quantitative and organizational judgment in a professional environment where accuracy affected real project decisions.",
+        "At GCI, I applied quantitative and organizational judgment in a professional environment where accuracy affected real project decisions.",
       context: "Project Engineer Intern · San Francisco · Summer 2025",
       result: "Multimillion-dollar",
       resultDetail: "office projects estimated with project teams",
@@ -172,7 +172,7 @@ export const portfolio = {
     label: "Leadership · Cira Health at Berkeley",
     title: "Turning community intent into coordinated action.",
     summary:
-      "Nick leads a roughly 10-person outreach team, builds nonprofit relationships, and turns volunteer ideas into coordinated events.",
+      "I lead a roughly 10-person outreach team, build nonprofit relationships, and turn volunteer ideas into coordinated events.",
     details: [
       "Serves as Director of Outreach",
       "Develops relationships with local nonprofit organizations",

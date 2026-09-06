@@ -33,7 +33,7 @@ export function About() {
     >
       <div className="about-heading">
         <p className="section-kicker">About</p>
-        <h2 id="about-title">Range built through doing.</h2>
+        <h2 id="about-title">Range I’ve built through doing.</h2>
       </div>
       <div className="about-copy">
         {portfolio.about.map((paragraph) => (

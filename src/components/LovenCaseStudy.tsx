@@ -41,7 +41,7 @@ export function LovenCaseStudy() {
 
         <div className="case-columns">
           <section>
-            <h4>What Nick built</h4>
+            <h4>What I built</h4>
             <ul className="feature-list">
               {loven.built.map((item) => (
                 <li key={item}>{item}</li>
@@ -49,9 +49,9 @@ export function LovenCaseStudy() {
             </ul>
           </section>
           <section>
-            <h4>What Nick owned</h4>
+            <h4>What I owned</h4>
             <p>{loven.process}</p>
-            <ul className="inline-list" aria-label="Areas Nick owned">
+            <ul className="inline-list" aria-label="Areas I owned">
               {loven.ownership.map((item) => (
                 <li key={item}>{item}</li>
               ))}
@@ -83,7 +83,7 @@ export function LovenCaseStudy() {
             <p>{loven.outcome}</p>
           </section>
           <section className="learning">
-            <p className="section-kicker">What Nick learned</p>
+            <p className="section-kicker">What I learned</p>
             <p>{loven.learning}</p>
           </section>
         </div>
