@@ -43,7 +43,7 @@ export function SelectedWork() {
     >
       <div className="section-intro">
         <p className="section-kicker">Selected work · 01–05</p>
-        <h2 id="work-title">Built, tested, and operated.</h2>
+        <h2 id="work-title">What I’ve built, tested, and operated.</h2>
         <p>{portfolio.workIntro}</p>
       </div>
       <LovenCaseStudy />
