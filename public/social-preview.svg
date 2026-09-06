@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Nick Lieberman portfolio</title>
+  <desc id="desc">Editorial title card in warm cream and deep green</desc>
+  <rect width="1200" height="630" fill="#f4f1e9"/>
+  <rect x="72" y="68" width="1056" height="494" fill="none" stroke="#c9c5b9"/>
+  <circle cx="1035" cy="155" r="62" fill="#ef765f"/>
+  <text x="120" y="186" fill="#607169" font-family="Arial, sans-serif" font-size="25" letter-spacing="5">NICK LIEBERMAN</text>
+  <text x="120" y="300" fill="#1e2522" font-family="Georgia, serif" font-size="68">Product, strategy,</text>
+  <text x="120" y="382" fill="#1e2522" font-family="Georgia, serif" font-size="68">and operations.</text>
+  <path d="M120 468h960" stroke="#253d35" stroke-width="3"/>
+  <text x="120" y="520" fill="#4f5753" font-family="Arial, sans-serif" font-size="24">Selected work · Berkeley, California</text>
+</svg>
