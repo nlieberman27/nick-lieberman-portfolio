@@ -1,201 +1,76 @@
-export type Project = {
+export type Link = { label: string; href: string };
+export type Experience = {
   id: string;
-  label: string;
-  title: string;
-  summary: string;
-  context: string;
-  result?: string;
-  resultDetail?: string;
-  details: string[];
+  name: string;
+  dates: string;
+  role: string;
+  location?: string;
+  context?: string;
+  body: string;
+  links?: Link[];
 };
 
-export type ContactConfig = {
-  email?: string;
-  linkedInUrl?: string;
-  resumeUrl?: string;
-};
-
-// Public portfolio content is intentionally centralized here for safe future updates.
 export const portfolio = {
   name: "Nick Lieberman",
-  location: "Berkeley, California",
-  contact: {} as ContactConfig,
   hero: {
-    headline:
-      "I take ambiguous ideas far enough to find out whether they work.",
-    supporting:
-      "I’m a UC Berkeley Economics student. My work spans digital products, small businesses, property operations, commercial construction, and community leadership.",
+    heading: "Hi, I’m Nick.",
+    body: "I’m an economics student at UC Berkeley. I like the part where an idea stops being hypothetical—whether that means shipping a product, pricing a project, fixing up a space, or organizing people around something useful.",
+    education: "UC Berkeley · Economics · Data Science minor in progress · December 2027",
   },
-  workIntro:
-    "Different settings, same pattern: understand the problem, make the tradeoffs, and get something concrete into the world.",
+  contact: {
+    email: "nlieberman27@berkeley.edu",
+    linkedin: "https://www.linkedin.com/in/nicholaslieberman/",
+  },
+  now: [
+    { name: "UC Berkeley", body: "Studying economics and completing a Data Science minor." },
+    { name: "Lake Street Labs", body: "Building practical health resources with my dad, a dentist and retired professor of dentistry." },
+    { name: "Cura Health at Berkeley", body: "Leading outreach and organizing hands-on service projects around the Bay Area." },
+  ],
   loven: {
-    label: "01 · Product building",
-    title: "Loven",
+    name: "Loven",
+    dates: "2026",
+    line: "Messages worth saving, delivered when they matter.",
+    body: "I built Loven to help friends and family write messages now and let them arrive over time. I designed the organizer, contributor, and recipient experience, then turned it into a working web app using AI-assisted development tools.",
+    role: "Product concept, UX and build",
     url: "https://giveloven.com/",
-    summary:
-      "A full-stack product for organizing messages and media for someone else, then delivering them through a paced recipient experience.",
-    status: "Publicly deployed · Business experiment frozen",
-    problem:
-      "Collecting meaningful messages from multiple people is often disorganized, while delivering everything at once can make the experience feel fleeting. Loven was an attempt to make both the coordination and the eventual recipient experience feel deliberate.",
-    built: [
-      "Batch creation",
-      "Organizer, contributor, and recipient experiences",
-      "Tokenized links",
-      "Written messages and multimedia uploads",
-      "Scheduling, cadence, and time-zone controls",
-      "Recipient reveal experience",
-      "Sender and sign-off controls",
-      "Privacy-conscious analytics",
-      "Mobile usability",
-      "Reduced-motion considerations",
-      "Public deployment",
-    ],
-    ownership: [
-      "Product definition",
-      "User flows",
-      "Brand and interface decisions",
-      "Testing",
-      "Iterative implementation",
-      "Troubleshooting",
-      "Deployment",
-      "Early distribution experiments",
-    ],
-    process:
-      "I designed, built, refined, and deployed Loven through an AI-assisted workflow involving Replit, GitHub, and Codex. The work extended beyond prompting: sustained product judgment, experience design, testing, troubleshooting, implementation, and iteration shaped the released product.",
-    tradeoffs: [
-      {
-        title: "Three roles, one system",
-        text: "Making organizer, contributor, and recipient journeys feel connected without making their experiences identical.",
-      },
-      {
-        title: "Access without friction",
-        text: "Using tokenized links to make contributing easier while preserving clear boundaries between experiences.",
-      },
-      {
-        title: "Timing that holds up",
-        text: "Designing scheduling and cadence controls around real time zones rather than idealized handoffs.",
-      },
-      {
-        title: "Warmth with clarity",
-        text: "Supporting emotional media and a warm brand while keeping controls understandable, privacy-conscious, mobile-friendly, and considerate of reduced motion.",
-      },
-    ],
-    outcome:
-      "Built and publicly deployed a functioning product at giveloven.com, from the underlying role-based experience through storage, scheduling, analytics, and the recipient reveal.",
-    learning:
-      "Building the product was only part of the problem. Early distribution experiments did not establish repeatable conversion, which changed how I think about validating demand and distribution before expanding a build.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Vite",
-      "Tailwind",
-      "Node/Express",
-      "PostgreSQL",
-      "Drizzle",
-      "Supabase Storage",
-      "PostHog",
+    sequence: ["Create a batch", "Invite people to add messages", "Open a message when it is ready"],
+  },
+  current: [
+    {
+      id: "lake-street-labs", name: "Lake Street Labs", dates: "2026–Present", role: "Co-founder",
+      body: "With my dad, a dentist and retired professor of dentistry, I’m building practical resources for people who deal with canker sores. I created the brand and storefront and co-authored the first guide and tracker.",
+    },
+    {
+      id: "cura", name: "Cura Health at Berkeley", dates: "2025–Present", role: "Director of Outreach",
+      body: "As Director of Outreach for Cura Health at Berkeley, I organize service projects for a roughly 50-member student organization. That has included clothing drives and volunteer days with Glide and Project Open Hand.",
+    },
+  ] satisfies Experience[],
+  experience: [
+    {
+      id: "gci", name: "GCI General Contractors", dates: "2025", role: "Project Engineer Intern", location: "San Francisco",
+      body: "At GCI, I worked across cost estimating, financial analysis and project coordination for commercial interiors. I helped price multimillion-dollar office projects and supported the successful Flagstar Bank bid.",
+    },
+    {
+      id: "jar-farms", name: "JAR Farms / Paradise Del Mar", dates: "2024", role: "Entrepreneur in Residence · Operations & Property Management", context: "A teen-led nonprofit and retreat in Tiburon.",
+      body: "At JAR Farms, I worked as an Entrepreneur in Residence and helped turn former staff quarters into a guest-ready waterfront bungalow. I launched and managed its Airbnb operation, which generated about $30,000 in revenue.",
+      links: [
+        { label: "JAR Farms", href: "https://www.jarfarms.com/" },
+        { label: "Paradise Del Mar", href: "https://www.paradisedelmar.com/" },
+        { label: "Airbnb", href: "https://www.airbnb.com/rooms/1167382332620530428" },
+      ],
+    },
+    {
+      id: "marin-kits", name: "Marin Emergency Kits", dates: "2023", role: "Founder",
+      body: "I started Marin Emergency Kits with my younger brother after seeing how unprepared many households were for wildfire and earthquake risk. We sourced, packed and distributed 50 kits in Marin, then worked with two attorneys on a plan to scale the business.",
+    },
+  ] satisfies Experience[],
+  archive: {
+    name: "3GuysWhoCare", dates: "2020",
+    body: "At 15, I co-founded 3GuysWhoCare with two friends during COVID-19. I led operations for the mask business and learned unit economics by actually having to make and ship the product.",
+    links: [
+      { label: "Original site", href: "https://www.3guyswhocare.com/" },
+      { label: "Press", href: "https://www.3guyswhocare.com/in-the-news" },
     ],
   },
-  projects: [
-    {
-      id: "marin-emergency-kits",
-      label: "02 · Entrepreneurship and operations",
-      title: "Marin Emergency Kits",
-      summary:
-        "I turned a local preparedness need into an operating business, handling the work from sourcing and pricing through marketing and fulfillment.",
-      context:
-        "Founded in 2023 after identifying a local emergency-preparedness need.",
-      result: "≈ $10,000",
-      resultDetail: "in sales within two months",
-      details: [
-        "Selected kit contents and evaluated suppliers and product costs",
-        "Set pricing and managed inventory",
-        "Built the website and worked on SEO and local marketing",
-        "Fulfilled orders and delivered kits",
-      ],
-    },
-    {
-      id: "paradise-del-mar",
-      label: "03 · Operations and commercial decision-making",
-      title: "Paradise Del Mar",
-      summary:
-        "I helped turn a neglected guesthouse into a launch-ready short-term rental, combining renovation decisions, pricing, listing operations, and guest experience.",
-      context:
-        "Operations and property management near La Paz, Mexico · Summer 2024",
-      result: "≈ $30,000",
-      resultDetail:
-        "in rental revenue generated by the property within three months",
-      details: [
-        "Analyzed tradeoffs across furnishings, appliances, materials, and costs",
-        "Helped make renovation and launch decisions",
-        "Managed Airbnb and Vrbo pricing",
-        "Handled guest communication and listing optimization",
-      ],
-    },
-    {
-      id: "lake-street-labs",
-      label: "04 · Early-stage research and market testing",
-      title: "Lake Street Labs",
-      summary:
-        "Before committing to a regulated product, I investigated whether the opportunity was commercially, technically, and regulatorily viable.",
-      context:
-        "An exploratory effort focused on over-the-counter solutions for canker sores; no finished medical product launched.",
-      result: "40+ practices",
-      resultDetail: "contacted as one part of early demand testing",
-      details: [
-        "Analyzed competitive products, pricing, and positioning",
-        "Recruited a UC Berkeley bioengineering PhD candidate and consulted a dentist",
-        "Investigated formulation feasibility and the FDA regulatory pathway",
-        "Created two patient-education digital books",
-        "Tested assumptions through conversations, Google Ads, social media, Shopify, and dental-practice outreach",
-      ],
-    },
-    {
-      id: "gci",
-      label: "05 · Professional project execution",
-      title: "GCI General Contractors",
-      summary:
-        "At GCI, I applied quantitative and organizational judgment in a professional environment where accuracy affected real project decisions.",
-      context: "Project Engineer Intern · San Francisco · Summer 2025",
-      result: "Multimillion-dollar",
-      resultDetail: "office projects estimated with project teams",
-      details: [
-        "Read project plans and built cost estimates",
-        "Supported a successful Flagstar Bank bid",
-        "Coordinated procurement and worked across RFIs and submittals",
-        "Communicated with project teams, architects, and subcontractors",
-        "Helped resolve project requirements and execution questions",
-      ],
-    },
-  ] satisfies Project[],
-  leadership: {
-    label: "Leadership · Cira Health at Berkeley",
-    title: "Turning community intent into coordinated action.",
-    summary:
-      "I lead a roughly 10-person outreach team, build nonprofit relationships, and turn volunteer ideas into coordinated events.",
-    details: [
-      "Serves as Director of Outreach",
-      "Develops relationships with local nonprofit organizations",
-      "Plans volunteer events and coordinates logistics for student groups",
-    ],
-    result:
-      "Started a community drive that collected approximately 40 bags of clothing and essentials for unhoused residents.",
-  },
-  about: [
-    "Most of my experience has come from entering unfamiliar situations and learning quickly enough to contribute. I’ve built a local emergency-preparedness business, helped launch a short-term rental in Mexico, worked on construction estimates in San Francisco, explored a regulated healthcare product, and shipped a full-stack digital product with AI-assisted development tools.",
-    "I started college at Washington University in St. Louis, continued at College of Marin, and transferred to UC Berkeley, where I study Economics and am completing a minor in Data Science. The route was not linear, but it made me comfortable turning uncertainty into concrete next steps.",
-  ],
-  education: {
-    school: "University of California, Berkeley",
-    degree: "B.A. Economics · Expected December 2027",
-    minor: "Data Science minor in progress",
-  },
-  capabilities: [
-    "Product framing and iteration",
-    "Market and competitive research",
-    "Pricing and analytical decision-making",
-    "Operations",
-    "Stakeholder coordination",
-    "AI-assisted product development",
-  ],
+  about: "I’m most drawn to strategy, operations and product work. I like small teams, steep learning curves and work with a visible result. Outside of that, I run, lift and spend as much time outside as Berkeley weather allows.",
 } as const;
